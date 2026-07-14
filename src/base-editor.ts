@@ -30,6 +30,14 @@ export abstract class BaseEditor<C extends BaseWidgetConfig = BaseWidgetConfig>
   /** The ha-form schema. Re-evaluated on every render, so it may depend on hass/config. */
   protected abstract schema(): HaFormSchema[];
 
+  /**
+   * Data shown in the form. Override to reflect config defaults in the UI
+   * (e.g. a toggle that is on unless explicitly disabled).
+   */
+  protected editorData(): C {
+    return this.config as C;
+  }
+
   /** Label for a schema entry. Override with translations / friendly names. */
   protected computeLabel = (entry: HaFormSchema): string => entry.name;
 
@@ -53,7 +61,7 @@ export abstract class BaseEditor<C extends BaseWidgetConfig = BaseWidgetConfig>
     return html`
       <ha-form
         .hass=${this.hass}
-        .data=${this.config}
+        .data=${this.editorData()}
         .schema=${this.schema()}
         .computeLabel=${this.computeLabel}
         .computeHelper=${this.computeHelper}
