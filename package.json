@@ -1,0 +1,36 @@
+{
+  "name": "@wdh/widgets-core",
+  "version": "2026.7.0",
+  "description": "Shared core library for WDH Home Assistant dashboard widgets: base card class, visual editor helpers, area auto-detection and design tokens.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "release": "node scripts/bump-version.mjs --tag"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OWNER/wdh-widgets-core.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "lit": "^3.3.0"
+  },
+  "devDependencies": {
+    "typescript": "~5.6.3",
+    "vitest": "^2.1.9"
+  }
+}
