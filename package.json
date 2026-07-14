@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/OWNER/wdh-widgets-core.git"
+    "url": "git+https://github.com/leonherrmann/wdh-widgets-core.git"
   },
   "license": "MIT",
   "dependencies": {

@@ -27,7 +27,7 @@ dist file at build time:
 
 ```json
 "dependencies": {
-  "@wdh/widgets-core": "github:OWNER/wdh-widgets-core#v2026.7.0"
+  "@wdh/widgets-core": "github:leonherrmann/wdh-widgets-core#v2026.7.0"
 }
 ```
 
@@ -53,7 +53,7 @@ npm run build     # tsc → dist/
 
 ## Widgets built on this core
 
-- [wdh-room-summary-card](https://github.com/OWNER/wdh-room-summary-card) — room temperature, humidity and climate at a glance
+- [wdh-room-summary-card](https://github.com/leonherrmann/wdh-room-summary-card) — room temperature, humidity and climate at a glance
 
 ## License
 
