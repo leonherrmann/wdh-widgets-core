@@ -47,10 +47,19 @@ export function findByDomain(
   areaId: string,
   domain: string
 ): string | undefined {
+  return findAllByDomain(hass, areaId, domain)[0];
+}
+
+/** All entities of a domain in an area, e.g. every climate device of a room. */
+export function findAllByDomain(
+  hass: HomeAssistant,
+  areaId: string,
+  domain: string
+): string[] {
   const prefix = `${domain}.`;
-  return entitiesForArea(hass, areaId).find((entry) =>
-    entry.entity_id.startsWith(prefix)
-  )?.entity_id;
+  return entitiesForArea(hass, areaId)
+    .filter((entry) => entry.entity_id.startsWith(prefix))
+    .map((entry) => entry.entity_id);
 }
 
 /** First sensor in an area with the given device_class (e.g. temperature, humidity). */

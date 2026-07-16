@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
   areaOfEntity,
   entitiesForArea,
+  findAllByDomain,
   findByDomain,
   findSensor,
 } from "../src/registry.js";
@@ -109,5 +110,13 @@ describe("registry helpers", () => {
   it("finds entities by domain", () => {
     expect(findByDomain(hass, "living", "climate")).toBe("climate.living");
     expect(findByDomain(hass, "bedroom", "climate")).toBeUndefined();
+  });
+
+  it("finds all entities of a domain", () => {
+    expect(findAllByDomain(hass, "living", "sensor")).toEqual([
+      "sensor.living_humidity",
+      "sensor.living_temp",
+    ]);
+    expect(findAllByDomain(hass, "bedroom", "climate")).toEqual([]);
   });
 });

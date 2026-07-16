@@ -24,6 +24,13 @@ export const wdhTokens = css`
     --wdh-weight-black: 800;
     --wdh-weight-bold: 700;
     --wdh-weight-medium: 500;
+
+    /* Neo-brutalist palette: ink outlines on paper tiles over accent surfaces */
+    --wdh-ink: #14141a;
+    --wdh-paper: #ffffff;
+    --wdh-border-width: 2.5px;
+    --wdh-font-mono: ui-monospace, "SF Mono", "Cascadia Mono", "Roboto Mono",
+      Menlo, Consolas, monospace;
   }
 `;
 
