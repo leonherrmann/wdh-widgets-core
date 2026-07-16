@@ -1,1 +1,1 @@
-export const WDH_CORE_VERSION = "2026.7.0";
+export const WDH_CORE_VERSION = "2026.7.1";

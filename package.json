@@ -1,6 +1,6 @@
 {
   "name": "@wdh/widgets-core",
-  "version": "2026.7.0",
+  "version": "2026.7.1",
   "description": "Shared core library for WDH Home Assistant dashboard widgets: base card class, visual editor helpers, area auto-detection and design tokens.",
   "type": "module",
   "main": "dist/index.js",
